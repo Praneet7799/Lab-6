@@ -166,20 +166,20 @@ int binSrcLL(SLL ll, int key)
 int main()
 {
     cout<<"\nEnter the number of array elements: ";
-    int s;
-    cin>>s;
-    array A;
-    A.len=s;
+    int n;
+    cin>>n;
+    array Arr;
+    Arr.len=n;
     cout<<"\nInput the array in an ascending order: ";
-    for(int i=0;i<s;i++)
+    for(int i=0;i<n;i++)
     {
-     cin>>A.arr[i];
+     cin>>Arr.arr[i];
     }
-    //sortArray(A.arr);
+    //sortArray(Arr.arr);
     cout<<"\nEnter the element to be searched: ";
     int key;
     cin>>key;
-    int pos=binarySearch(A.arr, key, 0, s-1);
+    int pos=binarySearch(A.arr, key, 0, n-1);
     if(pos==-1)
     {
         cout<<"\nElement not found !";
@@ -193,18 +193,27 @@ int main()
     //TEST CODE FOR LINKED LIST
     
     SLL l1;
-    l1.insert(12);
-    l1.insert(34);
-    l1.insert(43);
-    l1.insert(51);
-    l1.insert(62);
-    l1.insert(70);
-    l1.insert(97);
+    l1.insert(67);
+    l1.insert(876);
+    l1.insert(9809);
+    l1.insert(733);
+    l1.insert(628);
     //l1.sort()
 	
     cout<<"\n \nEXECUTING TEST CODE FOR LINKED LIST";    
    
-    int pos2=binSrcLL(l1, 51);
+    int pos2=binSrcLL(l1, 733);
+        if(pos2==-1)
+    {
+        cout<<"\nElement not found !";
+    }
+    else
+    {
+        cout<<"\nElement found at position: "<<pos2+1;
+    }
+    //Let the key be 733
+	
+int pos2=binSrcLL(l1, 51);
         if(pos2==-1)
     {
         cout<<"\nElement not found !";
